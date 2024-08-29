@@ -1,0 +1,61 @@
+2024-08-29 14:30:32,125 - Starting packet sniffing...
+2024-08-29 14:30:45,186 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:30:45,189 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:30:45,190 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:30:45,191 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:30:45,191 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:30:45,195 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:30:46,039 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:31:13,431 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:31:13,434 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:31:13,434 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:31:14,898 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 20.189.173.7
+2024-08-29 14:31:15,026 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 20.189.173.7
+2024-08-29 14:31:15,031 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 20.189.173.7
+2024-08-29 14:31:15,341 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 20.189.173.7
+2024-08-29 14:31:33,205 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 13.89.179.10
+2024-08-29 14:31:33,208 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 13.89.179.10
+2024-08-29 14:32:11,817 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 104.208.16.89
+2024-08-29 14:32:15,768 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:32:15,771 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:32:15,771 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:32:15,774 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:32:15,774 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:32:15,776 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:32:17,892 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 104.208.16.89
+2024-08-29 14:32:18,128 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 104.208.16.89
+2024-08-29 14:32:18,199 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 104.208.16.89
+2024-08-29 14:32:18,275 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:32:18,277 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:32:18,277 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.167.8
+2024-08-29 14:32:18,300 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 104.208.16.89
+2024-08-29 14:37:20,489 - Starting packet sniffing...
+2024-08-29 14:37:33,708 - Suspiciously repetitive traffic detected from 192.168.1.40
+2024-08-29 14:37:34,044 - Failed to block IP 192.168.1.40. Error: Command 'netsh advfirewall firewall add rule name='Blocked IP' dir=in action=block remoteip=192.168.1.40' returned non-zero exit status 1.
+2024-08-29 14:37:34,048 - Suspiciously repetitive traffic detected from 192.168.1.40
+2024-08-29 14:37:34,291 - Failed to block IP 192.168.1.40. Error: Command 'netsh advfirewall firewall add rule name='Blocked IP' dir=in action=block remoteip=192.168.1.40' returned non-zero exit status 1.
+2024-08-29 14:37:42,058 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 140.82.113.25
+2024-08-29 14:37:42,124 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 140.82.113.25
+2024-08-29 14:37:43,360 - Suspiciously repetitive traffic detected from 192.168.1.40
+2024-08-29 14:37:43,601 - Failed to block IP 192.168.1.40. Error: Command 'netsh advfirewall firewall add rule name='Blocked IP' dir=in action=block remoteip=192.168.1.40' returned non-zero exit status 1.
+2024-08-29 14:38:02,661 - Starting packet sniffing...
+2024-08-29 14:38:11,214 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 149.56.240.31
+2024-08-29 14:38:11,554 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 149.56.240.31
+2024-08-29 14:38:13,512 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 54.38.113.7
+2024-08-29 14:38:13,534 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 54.38.113.7
+2024-08-29 14:38:13,838 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 54.38.113.7
+2024-08-29 14:38:19,317 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 149.56.240.31
+2024-08-29 14:38:19,369 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 149.56.240.31
+2024-08-29 14:38:19,912 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 149.56.240.31
+2024-08-29 14:38:21,255 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 54.38.113.7
+2024-08-29 14:38:21,319 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 54.38.113.7
+2024-08-29 14:38:21,660 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 54.38.113.7
+2024-08-29 14:38:21,847 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 54.38.113.7
+2024-08-29 16:23:22,526 - Starting packet sniffing...
+2024-08-29 16:23:58,394 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.189.59
+2024-08-29 16:23:58,394 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.189.59
+2024-08-29 16:23:58,399 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.189.59
+2024-08-29 16:23:58,399 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.189.59
+2024-08-29 16:23:58,399 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.189.59
+2024-08-29 16:23:58,402 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.189.59
+2024-08-29 16:23:58,404 - Suspiciously large packet (1506 bytes) detected from 192.168.1.40 to 40.79.189.59
