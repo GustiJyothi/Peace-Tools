@@ -1,11 +1,11 @@
-import socket  # menentukan IP lokal & buat koneksi IP eksternal
-import ipaddress  # menghitung dan mengelola rentang subnet dari IP local
-import platform  # menentukan sistem operasi untuk penggunaan malware
+import socket
+import ipaddress
+import platform
 import subprocess
 import os
 import time
-import hashlib  # computing file hashes
-import requests  # download malicious data
+import hashlib
+import requests
 import logging
 from scapy.all import *
 from prettytable import PrettyTable
@@ -39,7 +39,7 @@ def find_local_ip():
         temp_socket.connect(("8.8.8.8", 80))
         local_ip = temp_socket.getsockname()[0]
         temp_socket.close()
-        return local_ip  # Mengembalikan IP lokal
+        return local_ip
     except Exception as error:
         print("Error:", error)
         return None
@@ -65,10 +65,8 @@ def scan_subnet(subnet, ports="1-65535", script="vuln"):
 
 # Block IP if suspicious activity is detected
 def block_ip(ip_address):
-    os_name = platform.system()  # Mengganti variabel 'system' menjadi 'os_name'
-    if os_name == 'Windows':
-        command = f"netsh advfirewall firewall add rule name='Blocked IP' dir=in action=block remoteip={ip_address}"
-    elif os_name == 'Linux':
+    os_name = platform.system()
+    if os_name == 'Linux':
         command = f"sudo iptables -A INPUT -s {ip_address} -j DROP"
     else:
         logging.error(f"Unsupported OS: {os_name}")
@@ -77,11 +75,11 @@ def block_ip(ip_address):
 
     try:
         subprocess.run(command, shell=True, check=True)
-        logging.info(f"Blocked IP: {ip_address}")  # Log the blocked IP address
-        print(f"Blocked IP: {ip_address}")  # Print to console
+        logging.info(f"Blocked IP: {ip_address}")
+        print(f"Blocked IP: {ip_address}")
     except subprocess.CalledProcessError as e:
         logging.error(f"Failed to block IP {ip_address}. Error: {e}")
-        print(f"Failed to block IP {ip_address}. Error: {e}")  # Print to console
+        print(f"Failed to block IP {ip_address}. Error: {e}")
 
 # Callback function for Scapy sniffing
 def packet_callback(packet):
@@ -109,8 +107,8 @@ def packet_callback(packet):
 
 # Start Intrusion Detection System (IDS)
 def start_ids():
-    logging.info("Starting packet sniffing...")  # Log when sniffing starts
-    print("Starting packet sniffing...")  # Print to console
+    logging.info("Starting packet sniffing...")
+    print("Starting packet sniffing...")
     sniff(prn=packet_callback, store=0)
 
 # Computes MD5, SHA1, and SHA256 hashes for a file
@@ -120,8 +118,8 @@ def compute_hashes(file_path):
         'sha1': hashlib.sha1(),
         'sha256': hashlib.sha256()
     }
-    with open(file_path, 'rb') as f:  # Open file in binary mode
-        while chunk := f.read(65536):  # Read file in chunks
+    with open(file_path, 'rb') as f:
+        while chunk := f.read(65536):
             for hasher in hashers.values():
                 hasher.update(chunk)
     return {name: hasher.hexdigest() for name, hasher in hashers.items()}
@@ -137,9 +135,9 @@ def identify_malware(file_hashes, classification):
 def scan_file(file_path, malicious_hashes, classification, table):
     file_hashes = compute_hashes(file_path)
     if any(hash_value in malicious_hashes for hash_value in file_hashes.values()):
-        malware_type = identify_malware(file_hashes, classification)  # Identify malware type
-        table.add_row([file_path, malware_type])  # Add result to table
-        os.system('cls' if platform.system() == 'Windows' else 'clear')
+        malware_type = identify_malware(file_hashes, classification)
+        table.add_row([file_path, malware_type])
+        os.system('clear')  # Clear the screen for Linux
         print(table)
 
 # Scan a directory for malware
@@ -180,7 +178,6 @@ def scan_malware(directories):
     print(f"\nTotal files scanned: {total_files}")
     print(f"Runtime: {time.time() - start_time:.2f} seconds")
 
-
 if __name__ == "__main__":
     tool_name = ""
 
@@ -195,7 +192,6 @@ if __name__ == "__main__":
             print(f"The calculated CIDR notation is: {subnet}")
             ip_range(subnet)
 
-            # Asks users for their choice of scan
             print()
             print("Choose a scan option:")
             print()
@@ -205,8 +201,7 @@ if __name__ == "__main__":
 
             print()
             choice = input("Enter your choice (1/2/3): ")
-            
-            # Based on choice, run the appropriate scan
+
             if choice == "1":
                 print()
                 print("Scanning all active hosts for open ports and identifying services with vulnerabilities...")
