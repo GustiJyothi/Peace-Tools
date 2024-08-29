@@ -231,4 +231,3 @@ if __name__ == "__main__":
                 print("Scan Results:")
                 print()
                 print(scan_result)
-           
