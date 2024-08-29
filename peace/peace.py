@@ -69,16 +69,13 @@ def block_ip(ip_address):
     if os_name == 'Linux':
         command = f"sudo iptables -A INPUT -s {ip_address} -j DROP"
     else:
-        logging.error(f"Unsupported OS: {os_name}")
         print(f"Unsupported OS: {os_name}")
         return
 
     try:
         subprocess.run(command, shell=True, check=True)
-        logging.info(f"Blocked IP: {ip_address}")
         print(f"Blocked IP: {ip_address}")
     except subprocess.CalledProcessError as e:
-        logging.error(f"Failed to block IP {ip_address}. Error: {e}")
         print(f"Failed to block IP {ip_address}. Error: {e}")
 
 # Callback function for Scapy sniffing
@@ -96,18 +93,15 @@ def packet_callback(packet):
 
         # Detect large packets
         if packet_size > 1500:
-            logging.warning(f"Suspiciously large packet ({packet_size} bytes) detected from {ip_src} to {ip_dst}")
             print(f"Suspiciously large packet ({packet_size} bytes) detected from {ip_src} to {ip_dst}")
 
         # Detect frequent requests from a single source
         if packet_count >= 100 and len(set(packet_sizes[-20:])) == 1:
-            logging.warning(f"Suspiciously repetitive traffic detected from {ip_src}")
             print(f"Suspiciously repetitive traffic detected from {ip_src}")
             block_ip(ip_src)
 
 # Start Intrusion Detection System (IDS)
 def start_ids():
-    logging.info("Starting packet sniffing...")
     print("Starting packet sniffing...")
     sniff(prn=packet_callback, store=0)
 
